@@ -1,0 +1,11 @@
+{
+  "model_key": "qwen3",
+  "reason": "best_validation_full_pass_rate",
+  "step": 246,
+  "adapter": "${EXTERNAL_HISTORICAL_ROOT}/diagnose_dapo/checkpoints/qwen3/full_dapo/adapters/step_000246",
+  "pass_frac": 0.9036309523809523,
+  "passed": 0.84,
+  "score": 0.84,
+  "n": 100,
+  "validation_file": "${EXTERNAL_HISTORICAL_ROOT}/diagnose_dapo/output/qwen3-full-dapo-2gpu-20260724-232104/validation/246.jsonl"
+}

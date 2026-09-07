@@ -1,0 +1,44 @@
+{
+  "schema_version": 2,
+  "experiment": "stage02_kodcode_sft_diagnosis",
+  "paper_role": "Appendix B SFT diagnosis",
+  "seed": 20260724,
+  "models": ["Qwen2.5-7B-Instruct", "Qwen3-8B-Base", "Llama-3.1-8B-Instruct", "Gemma-2-9B-Instruct"],
+  "prompt_modes_swept": ["plain", "native"],
+  "paper_rows": {"qwen25": "native", "qwen3": "plain", "llama31": "native", "gemma2": "native"},
+  "native_template_contract": {
+    "enable_thinking": false,
+    "applies_to_training_tokenization": true,
+    "applies_to_length_audit": true,
+    "applies_to_evaluation_rendering": true
+  },
+  "data": {
+    "external_jsonl": "kodcode4o_r1_clean38k/train.jsonl",
+    "external_parquet": "kodcode4o_r1_clean38k/train.parquet",
+    "jsonl_sha256": "810637674922d3c1fd4c99e120749f6e4411e1e709463a3b8f8b002a4dc28f07",
+    "parquet_sha256": "6e91ea43bb43ff9d20514c065428152078b36ba57c6f6c577f794395f6decae1",
+    "answer_rows": 37881,
+    "unique_original_questions": 36446,
+    "duplicated_questions_with_two_answers": 1435,
+    "gpt4o_rows": 28089,
+    "deepseek_r1_rows": 9792
+  },
+  "training": {
+    "method": "LoRA SFT",
+    "epochs": 1.0,
+    "reported_checkpoints_epochs": [0.5, 1.0],
+    "archived_checkpoint_steps": {"half_epoch": 1184, "final": 2368},
+    "learning_rate": 0.00002,
+    "effective_batch_size": 16,
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.01,
+    "max_sequence_length": 4096,
+    "strict_no_truncation": true,
+    "assistant_only_loss": true,
+    "lora_target_modules": ["q_proj", "k_proj", "v_proj", "o_proj"],
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05
+  },
+  "evaluation": {"contract": "paper_11_task_suite", "temperature": 0.2, "top_p": 0.95, "max_new_tokens_code": 2048}
+}

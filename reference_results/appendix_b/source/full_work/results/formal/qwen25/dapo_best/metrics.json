@@ -1,0 +1,145 @@
+{
+  "model_name": "qwen25_dapo_best",
+  "base_model_path": "${EXTERNAL_HISTORICAL_ROOT}/model/Qwen2.5-7B-Instruct",
+  "adapter_path": "${EXTERNAL_HISTORICAL_ROOT}/diagnose_dapo_full37881/checkpoints/qwen25/full_dapo/adapters/step_000397",
+  "seed": 20260725,
+  "prompt_mode": "chat",
+  "temperature": 0.2,
+  "top_p": 0.95,
+  "tasks_requested": [
+    "arc_challenge",
+    "scienceqa",
+    "legalbench",
+    "gsm8k",
+    "math500_medium",
+    "math500_high_level",
+    "finqa",
+    "medcalc",
+    "humaneval",
+    "mbpp_plus",
+    "mbpp_simple"
+  ],
+  "limit": 0,
+  "choice_batch_size": 24,
+  "generation_batch_size": 4,
+  "max_new_tokens_code": 2048,
+  "task_max_new_tokens": {
+    "gsm8k": 256,
+    "math500_medium": 512,
+    "math500_high_level": 512,
+    "finqa_medcalc": 128
+  },
+  "health_prompt_mode": "chat",
+  "health_temperature": 0.0,
+  "health_top_p": 1.0,
+  "started_at": "2026-07-27 15:21:19",
+  "paper_scoreable_standard": "11 tasks across code generation, mathematics, finance, medical, science QA and legal",
+  "excluded_from_paper_aggregate": {
+    "apps_hard": "excluded by user request",
+    "healthbench": "excluded by user request",
+    "healthbench_professional": "excluded by user request",
+    "planbench_hard_all_tasks": "excluded by user request"
+  },
+  "main": {
+    "arc_challenge": {
+      "n": 1172,
+      "correct": 603,
+      "accuracy": 0.514505119453925
+    },
+    "main_scoreable_mean": 0.5271903108371203,
+    "legalbench": {
+      "n": 1689,
+      "correct": 1222,
+      "accuracy": 0.7235050325636472
+    },
+    "math500_medium": {
+      "n": 105,
+      "correct": 73,
+      "accuracy": 0.6952380952380952
+    },
+    "finqa": {
+      "n": 1133,
+      "correct": 205,
+      "accuracy": 0.18093556928508384,
+      "raw_n": 1147,
+      "skipped_empty_target": 14,
+      "numeric_targets": 1111,
+      "text_targets": 22
+    },
+    "medcalc": {
+      "n": 1100,
+      "correct": 69,
+      "accuracy": 0.06272727272727273
+    },
+    "humaneval": {
+      "n": 164,
+      "correct": 138,
+      "pass_at_1": 0.8414634146341463
+    },
+    "mbpp_plus": {
+      "n": 378,
+      "correct": 254,
+      "pass_at_1": 0.671957671957672
+    }
+  },
+  "suite_wall_seconds": {
+    "main.arc_challenge": 22.4,
+    "diagnostic.scienceqa": 29.3,
+    "main.legalbench": 40.4,
+    "diagnostic.gsm8k": 1675.9,
+    "main.math500_medium": 271.5,
+    "hard.math500_high_level": 699.5,
+    "main.finqa": 102.9,
+    "main.medcalc": 611.2,
+    "main.humaneval": 256.5,
+    "main.mbpp_plus": 513.6,
+    "diagnostic.mbpp_simple": 352.8
+  },
+  "hard": {
+    "math500_high_level": {
+      "n": 262,
+      "correct": 84,
+      "accuracy": 0.32061068702290074
+    }
+  },
+  "diagnostic": {
+    "scienceqa": {
+      "n": 2224,
+      "correct": 1511,
+      "accuracy": 0.6794064748201439
+    },
+    "gsm8k": {
+      "n": 1319,
+      "correct": 986,
+      "accuracy": 0.7475360121304018,
+      "dataset_variant": "openai_gsm8k_official_test_full",
+      "split": "test",
+      "source_revision": "3101c7d5072418e28b9008a6636bde82a006892c",
+      "source_sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14",
+      "formal_result": true
+    },
+    "mbpp_simple": {
+      "n": 257,
+      "correct": 196,
+      "pass_at_1": 0.7626459143968871
+    },
+    "diagnostic_mean": 0.7298628004491442
+  },
+  "scoreable_overall_mean": 0.5636846603845614,
+  "scoreable_dataset_count": 11,
+  "scoreable_dataset_names": [
+    "arc_challenge",
+    "finqa",
+    "humaneval",
+    "legalbench",
+    "math500_medium",
+    "mbpp_plus",
+    "medcalc",
+    "math500_high_level",
+    "gsm8k",
+    "mbpp_simple",
+    "scienceqa"
+  ],
+  "scoreable_standard": "paper_11_tasks_no_apps_no_health_no_planbench",
+  "completed_at": "2026-07-27 16:42:07"
+}

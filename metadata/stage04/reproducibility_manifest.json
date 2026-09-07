@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "experiment": "stage04_legacy_taco_lora_ablation",
+  "manifest_policy": "counts_schema_provenance_and_hashes_only",
+  "contains_examples": false,
+  "contains_example_ids": false,
+  "contains_models_or_adapters": false,
+  "contains_results": false,
+  "sources": [
+    {
+      "name": "TACO",
+      "split": "train",
+      "role": "supervised programming problems and reference solutions",
+      "clean_rows": 19493
+    },
+    {
+      "name": "LeetCodeDataset",
+      "split": "train",
+      "role": "LeetCode-style programming problems and reference solutions",
+      "clean_rows": 2386
+    }
+  ],
+  "archive_provenance": {
+    "arm_data_component": "component_03644",
+    "script_component": "component_03975",
+    "note": "Component labels identify the validated legacy AOSS archive inventory; no archive payload is vendored."
+  },
+  "construction": {
+    "clean_pool_rows": 21879,
+    "matched_rows_per_control_or_removal_arm": 14043,
+    "sampling_seed": 20260603,
+    "category_count": 7,
+    "arm_count": 9,
+    "record_schema_fields": [
+      "id",
+      "dataset",
+      "arm",
+      "source_bucket",
+      "removed_category",
+      "primary_category",
+      "overlap_categories",
+      "source",
+      "difficulty",
+      "name",
+      "task_id",
+      "tags",
+      "raw_tags",
+      "skill_types",
+      "prompt",
+      "answer",
+      "messages"
+    ],
+    "assistant_only_loss": true,
+    "leave_out_rule": "remove examples whose overlap_categories intersects the selected category removal set, then deterministically sample to 14043"
+  },
+  "external_artifacts": {
+    "root_environment_variable": "CG_DATA_ROOT",
+    "relative_directory": "stage2_taco_sft_clean_prompt",
+    "hash_algorithm": "sha256",
+    "files": {
+      "full_sft.jsonl": {
+        "rows": 21879,
+        "sha256": "TO_BE_FILLED_AFTER_REBUILD"
+      },
+      "full_sft_14043.jsonl": {
+        "rows": 14043,
+        "sha256": "TO_BE_FILLED_AFTER_REBUILD"
+      },
+      "no_math_number_theory.jsonl": {
+        "rows": 14043,
+        "sha256": "TO_BE_FILLED_AFTER_REBUILD"
+      },
+      "no_data_structure.jsonl": {
+        "rows": 14043,
+        "sha256": "TO_BE_FILLED_AFTER_REBUILD"
+      },
+      "no_dynamic_programming.jsonl": {
+        "rows": 14043,
+        "sha256": "TO_BE_FILLED_AFTER_REBUILD"
+      },
+      "no_greedy_search.jsonl": {
+        "rows": 14043,
+        "sha256": "TO_BE_FILLED_AFTER_REBUILD"
+      },
+      "no_implementation_simulation.jsonl": {
+        "rows": 14043,
+        "sha256": "TO_BE_FILLED_AFTER_REBUILD"
+      },
+      "no_graph.jsonl": {
+        "rows": 14043,
+        "sha256": "TO_BE_FILLED_AFTER_REBUILD"
+      },
+      "no_other_algorithm.jsonl": {
+        "rows": 14043,
+        "sha256": "TO_BE_FILLED_AFTER_REBUILD"
+      }
+    }
+  }
+}

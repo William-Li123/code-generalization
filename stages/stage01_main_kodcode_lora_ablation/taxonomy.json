@@ -1,0 +1,84 @@
+{
+  "name": "kodcode_capability_taxonomy_balanced",
+  "version": "2.0.0",
+  "derivation": "Deterministic mapping from reviewed taxonomy v1.1.0; no API calls.",
+  "primary_label_policy": "Use exactly one v2 category derived from the reviewed v1 primary category and subcategory.",
+  "categories": [
+    {
+      "id": "hashing_counting_and_sets",
+      "definition": "Hash maps, hash sets, membership, frequency counting, deduplication, and collection counting.",
+      "v1_sources": ["array_hashing_and_sorting/hashing_counting"]
+    },
+    {
+      "id": "sequence_transformations",
+      "definition": "Direct transformations, scans, filtering, rearrangement, and construction of sequences.",
+      "v1_sources": ["array_hashing_and_sorting/sequence_transformation"]
+    },
+    {
+      "id": "sorting_and_ordered_processing",
+      "definition": "Sorting and order-dependent collection processing without an essential greedy proof.",
+      "v1_sources": ["array_hashing_and_sorting/sorting"]
+    },
+    {
+      "id": "range_window_and_matrix_processing",
+      "definition": "Sliding windows, two pointers, prefix computations, matrix operations, and local range processing.",
+      "v1_sources": [
+        "array_hashing_and_sorting/sliding_window",
+        "array_hashing_and_sorting/two_pointers",
+        "array_hashing_and_sorting/prefix_sum",
+        "array_hashing_and_sorting/matrix"
+      ]
+    },
+    {
+      "id": "string_and_parsing",
+      "definition": "Textual structure, parsing, matching, tokenization, encoding, and string transformation.",
+      "v1_sources": ["string_and_parsing/*"]
+    },
+    {
+      "id": "dynamic_programming",
+      "definition": "State transitions, memoization, overlapping subproblems, and optimal substructure.",
+      "v1_sources": ["dynamic_programming/*"]
+    },
+    {
+      "id": "graph_structures_and_stateful_systems",
+      "definition": "Graphs, trees, explicit data structures, repeated queries, and evolving stateful systems.",
+      "v1_sources": [
+        "graph_and_tree_algorithms/*",
+        "data_structures_and_queries/*",
+        "simulation_and_stateful_logic/*"
+      ]
+    },
+    {
+      "id": "greedy_search_and_optimization",
+      "definition": "Greedy decisions, monotone or combinatorial search, backtracking, scheduling, and optimization.",
+      "v1_sources": ["greedy_search_and_optimization/*"]
+    },
+    {
+      "id": "math_and_number_theory",
+      "definition": "Arithmetic, algebra, number theory, combinatorics, geometry, probability, and numerical reasoning.",
+      "v1_sources": ["math_and_number_theory/*"]
+    },
+    {
+      "id": "direct_implementation_and_utilities",
+      "definition": "Direct implementation, aggregation, validation, conversion, formatting, library, file, and date utilities.",
+      "v1_sources": ["direct_implementation_and_utilities/*"]
+    }
+  ],
+  "mapping": {
+    "array_hashing_and_sorting/hashing_counting": "hashing_counting_and_sets",
+    "array_hashing_and_sorting/sequence_transformation": "sequence_transformations",
+    "array_hashing_and_sorting/sorting": "sorting_and_ordered_processing",
+    "array_hashing_and_sorting/sliding_window": "range_window_and_matrix_processing",
+    "array_hashing_and_sorting/two_pointers": "range_window_and_matrix_processing",
+    "array_hashing_and_sorting/prefix_sum": "range_window_and_matrix_processing",
+    "array_hashing_and_sorting/matrix": "range_window_and_matrix_processing",
+    "string_and_parsing/*": "string_and_parsing",
+    "dynamic_programming/*": "dynamic_programming",
+    "graph_and_tree_algorithms/*": "graph_structures_and_stateful_systems",
+    "data_structures_and_queries/*": "graph_structures_and_stateful_systems",
+    "simulation_and_stateful_logic/*": "graph_structures_and_stateful_systems",
+    "greedy_search_and_optimization/*": "greedy_search_and_optimization",
+    "math_and_number_theory/*": "math_and_number_theory",
+    "direct_implementation_and_utilities/*": "direct_implementation_and_utilities"
+  }
+}

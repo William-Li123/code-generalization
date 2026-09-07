@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "experiment": "stage06_legacy_full_sft_robustness",
+  "models": ["Qwen2.5-7B-Instruct", "Qwen3-8B-Base"],
+  "arms": [
+    "full_sft",
+    "full_sft_14043",
+    "no_math_number_theory",
+    "no_data_structure",
+    "no_dynamic_programming",
+    "no_greedy_search",
+    "no_implementation_simulation",
+    "no_graph",
+    "no_other_algorithm"
+  ],
+  "archived_training_seeds": [20260603, 20260604],
+  "paper_reported_training_seeds": [20260604, 20260605],
+  "legacy_evaluation_seed": 20260605,
+  "provenance_discrepancy": "The recovered combined train/eval launcher labels 20260604 as TRAIN_SEED and 20260605 as EVAL_SEED; the manuscript reports 20260604/20260605 as full-SFT training seeds.",
+  "training_jobs": 36,
+  "evaluation_jobs": {
+    "full_sft": 36,
+    "base_once_per_model": 2,
+    "total": 38
+  },
+  "training": {
+    "epochs": 1.0,
+    "learning_rate": 0.00002,
+    "per_device_batch_size": 1,
+    "gradient_accumulation_steps": 2,
+    "world_size": 4,
+    "effective_batch_size": 8,
+    "max_sequence_length": 4096,
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.1,
+    "precision": "bf16",
+    "assistant_only_loss": true
+  },
+  "evaluation_contract": "appendix_a_10_no_gsm8k",
+  "evaluation_tasks": [
+    "humaneval",
+    "mbpp_simple",
+    "mbpp_plus",
+    "math500_medium",
+    "math500_high_level",
+    "finqa",
+    "medcalc",
+    "arc_challenge",
+    "legalbench",
+    "scienceqa"
+  ],
+  "legacy_diagnostic_warning": "Recovered raw metrics contain GSM8K n=250 and APPS diagnostics. Figure 7 and the Appendix-A package exclude both; they average exactly the ten tasks listed above.",
+  "archive_components": {
+    "first_seed_checkpoint_root": "stage4_taco_full_sft/seed_20260603",
+    "second_seed_evaluation_summary": "stage4-full-sft-seed20260604-eval-nohealth-20260619-114209",
+    "evaluation_component": "03962"
+  },
+  "external_freeze": {
+    "source_arm_contract": "metadata/stage04/reproducibility_manifest.json",
+    "hash_algorithm": "sha256",
+    "checkpoint_hash_values_recovered_in_public_snapshot": false,
+    "policy": "Record the Stage04 arm hashes and each final checkpoint index/weight hash in the external run manifest; do not invent unrecovered values."
+  },
+  "excluded_from_git": [
+    "full model weights",
+    "optimizer and resume shards",
+    "evaluation generations",
+    "legacy GSM8K/APPS diagnostic per-example outputs",
+    "cluster logs and private scheduler metadata"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "taxonomy": "kodcode_capability_taxonomy_balanced",
+  "taxonomy_version": "2.0.0",
+  "derivation": "Deterministic mapping from reviewed taxonomy v1.1.0; no API calls.",
+  "api_calls": 0,
+  "rows": 36074,
+  "primary_tags_v1": 9,
+  "subcategory_tags_v1_present": 59,
+  "technique_tags_v1_unique": 10222,
+  "primary_tags_v2": 10,
+  "balance": {
+    "v1": {
+      "category_count": 9,
+      "largest_count": 16292,
+      "smallest_count": 382,
+      "largest_share": 0.45162721073349227,
+      "smallest_share": 0.010589344125963298,
+      "max_min_ratio": 42.64921465968586,
+      "normalized_entropy": 0.7761898112687363
+    },
+    "v2": {
+      "category_count": 10,
+      "largest_count": 5641,
+      "smallest_count": 1712,
+      "largest_share": 0.15637301103287687,
+      "smallest_share": 0.047458002993845984,
+      "max_min_ratio": 3.294976635514019,
+      "normalized_entropy": 0.9733739354635691
+    }
+  },
+  "outputs": {
+    "train/sft": {
+      "rows": 35974,
+      "bytes": 45871516,
+      "sha256": "f28beea278bfc762fad78a3cb11041380e765cbb0c328104b34a0023e202001c",
+      "path": "output\\train\\sft_labeled.parquet"
+    },
+    "train/rl": {
+      "rows": 35974,
+      "bytes": 31938297,
+      "sha256": "a23ea34d57279ae59d7068c4bbd55df08df49b3d4ca42853a49302365d54f224",
+      "path": "output\\train\\rl_labeled.parquet"
+    },
+    "validation/sft": {
+      "rows": 100,
+      "bytes": 160105,
+      "sha256": "12b191279320d21ef8ca008e9ca75fa39cc41d061880f62ac0a142a139bcc232",
+      "path": "output\\validation\\sft_labeled.parquet"
+    },
+    "validation/rl": {
+      "rows": 100,
+      "bytes": 127880,
+      "sha256": "380992eb51a792f641d31306704e5eb58f26ef53e4d81ee4757c5552cf046ece",
+      "path": "output\\validation\\rl_labeled.parquet"
+    }
+  }
+}

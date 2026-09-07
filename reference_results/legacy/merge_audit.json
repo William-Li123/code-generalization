@@ -1,0 +1,947 @@
+{
+  "created_at": "2026-07-16 05:54:53",
+  "mode": "apply",
+  "updated_destination_count": 94,
+  "records": [
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260603/Qwen2.5-7B-Instruct__full_sft/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260603/Qwen2.5-7B-Instruct__full_sft/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.796,
+      "new_gsm8k_accuracy": 0.7816527672479151,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5559808100176987
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260603/Qwen2.5-7B-Instruct__full_sft_14043/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260603/Qwen2.5-7B-Instruct__full_sft_14043/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.768,
+      "new_gsm8k_accuracy": 0.7808946171341926,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.551982787725533
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260603/Qwen2.5-7B-Instruct__no_math_number_theory/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260603/Qwen2.5-7B-Instruct__no_math_number_theory/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.804,
+      "new_gsm8k_accuracy": 0.7763457164518575,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5522972416184094
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260603/Qwen2.5-7B-Instruct__no_data_structure/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260603/Qwen2.5-7B-Instruct__no_data_structure/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.776,
+      "new_gsm8k_accuracy": 0.7733131159969674,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5565946010398498
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260603/Qwen2.5-7B-Instruct__no_dynamic_programming/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260603/Qwen2.5-7B-Instruct__no_dynamic_programming/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.784,
+      "new_gsm8k_accuracy": 0.7846853677028052,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5560959736851757
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260603/Qwen2.5-7B-Instruct__no_greedy_search/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260603/Qwen2.5-7B-Instruct__no_greedy_search/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.792,
+      "new_gsm8k_accuracy": 0.7831690674753601,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.556705467978573
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260603/Qwen2.5-7B-Instruct__no_implementation_simulation/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260603/Qwen2.5-7B-Instruct__no_implementation_simulation/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.78,
+      "new_gsm8k_accuracy": 0.7642153146322972,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5596676471872102
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260603/Qwen2.5-7B-Instruct__no_graph/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260603/Qwen2.5-7B-Instruct__no_graph/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.784,
+      "new_gsm8k_accuracy": 0.755117513267627,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.554196844988967
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260603/Qwen2.5-7B-Instruct__no_other_algorithm/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260603/Qwen2.5-7B-Instruct__no_other_algorithm/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.748,
+      "new_gsm8k_accuracy": 0.7490523123578469,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5592938092033792
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260603/Qwen3-8B-Base__full_sft/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260603/Qwen3-8B-Base__full_sft/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.872,
+      "new_gsm8k_accuracy": 0.8423047763457164,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5974838830728685
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260603/Qwen3-8B-Base__full_sft_14043/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260603/Qwen3-8B-Base__full_sft_14043/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.88,
+      "new_gsm8k_accuracy": 0.846095526914329,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6016812549251133
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260603/Qwen3-8B-Base__no_math_number_theory/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260603/Qwen3-8B-Base__no_math_number_theory/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.868,
+      "new_gsm8k_accuracy": 0.8453373768006065,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6039411985955152
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260603/Qwen3-8B-Base__no_data_structure/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260603/Qwen3-8B-Base__no_data_structure/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.888,
+      "new_gsm8k_accuracy": 0.8498862774829417,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6056719702810006
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260603/Qwen3-8B-Base__no_dynamic_programming/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260603/Qwen3-8B-Base__no_dynamic_programming/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.88,
+      "new_gsm8k_accuracy": 0.8385140257771039,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.602231959347609
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260603/Qwen3-8B-Base__no_greedy_search/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260603/Qwen3-8B-Base__no_greedy_search/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.872,
+      "new_gsm8k_accuracy": 0.8483699772554966,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6031331028896211
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260603/Qwen3-8B-Base__no_implementation_simulation/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260603/Qwen3-8B-Base__no_implementation_simulation/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.868,
+      "new_gsm8k_accuracy": 0.8430629264594389,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6046306102163367
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260603/Qwen3-8B-Base__no_graph/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260603/Qwen3-8B-Base__no_graph/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.872,
+      "new_gsm8k_accuracy": 0.8369977255496588,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6026703475109527
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260603/Qwen3-8B-Base__no_other_algorithm/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260603/Qwen3-8B-Base__no_other_algorithm/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.864,
+      "new_gsm8k_accuracy": 0.8453373768006065,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5977147837118323
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260604/Qwen2.5-7B-Instruct__full_sft/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260604/Qwen2.5-7B-Instruct__full_sft/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.776,
+      "new_gsm8k_accuracy": 0.7680060652009097,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5490200036580899
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260604/Qwen2.5-7B-Instruct__full_sft_14043/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260604/Qwen2.5-7B-Instruct__full_sft_14043/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.788,
+      "new_gsm8k_accuracy": 0.7937831690674754,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5641109419817335
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260604/Qwen2.5-7B-Instruct__no_math_number_theory/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260604/Qwen2.5-7B-Instruct__no_math_number_theory/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.784,
+      "new_gsm8k_accuracy": 0.7460197119029568,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5540089153854505
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260604/Qwen2.5-7B-Instruct__no_data_structure/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260604/Qwen2.5-7B-Instruct__no_data_structure/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.76,
+      "new_gsm8k_accuracy": 0.7740712661106899,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5505679763940483
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260604/Qwen2.5-7B-Instruct__no_dynamic_programming/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260604/Qwen2.5-7B-Instruct__no_dynamic_programming/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.768,
+      "new_gsm8k_accuracy": 0.7725549658832449,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5497041966164392
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260604/Qwen2.5-7B-Instruct__no_greedy_search/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260604/Qwen2.5-7B-Instruct__no_greedy_search/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.78,
+      "new_gsm8k_accuracy": 0.7581501137225171,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5626182615182612
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260604/Qwen2.5-7B-Instruct__no_implementation_simulation/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260604/Qwen2.5-7B-Instruct__no_implementation_simulation/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.756,
+      "new_gsm8k_accuracy": 0.7520849128127369,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5614066836820478
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260604/Qwen2.5-7B-Instruct__no_graph/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260604/Qwen2.5-7B-Instruct__no_graph/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.78,
+      "new_gsm8k_accuracy": 0.7695223654283548,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5495499302781068
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260604/Qwen2.5-7B-Instruct__no_other_algorithm/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260604/Qwen2.5-7B-Instruct__no_other_algorithm/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.792,
+      "new_gsm8k_accuracy": 0.77710386656558,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5566295791360978
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260604/Qwen3-8B-Base__full_sft/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260604/Qwen3-8B-Base__full_sft/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.916,
+      "new_gsm8k_accuracy": 0.8423047763457164,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6026823742046927
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260604/Qwen3-8B-Base__full_sft_14043/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260604/Qwen3-8B-Base__full_sft_14043/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.864,
+      "new_gsm8k_accuracy": 0.8514025777103866,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6020126516819911
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260604/Qwen3-8B-Base__no_math_number_theory/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260604/Qwen3-8B-Base__no_math_number_theory/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.868,
+      "new_gsm8k_accuracy": 0.8468536770280516,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6049999024058338
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260604/Qwen3-8B-Base__no_data_structure/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260604/Qwen3-8B-Base__no_data_structure/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.884,
+      "new_gsm8k_accuracy": 0.844579226686884,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6055952583099713
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260604/Qwen3-8B-Base__no_dynamic_programming/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260604/Qwen3-8B-Base__no_dynamic_programming/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.872,
+      "new_gsm8k_accuracy": 0.8506444275966641,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6001783988270183
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260604/Qwen3-8B-Base__no_greedy_search/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260604/Qwen3-8B-Base__no_greedy_search/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.86,
+      "new_gsm8k_accuracy": 0.8392721758908264,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6040328213776559
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260604/Qwen3-8B-Base__no_implementation_simulation/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260604/Qwen3-8B-Base__no_implementation_simulation/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.86,
+      "new_gsm8k_accuracy": 0.8369977255496588,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5970744173405786
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260604/Qwen3-8B-Base__no_graph/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260604/Qwen3-8B-Base__no_graph/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.872,
+      "new_gsm8k_accuracy": 0.8559514783927218,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5939797811958161
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260604/Qwen3-8B-Base__no_other_algorithm/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260604/Qwen3-8B-Base__no_other_algorithm/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.872,
+      "new_gsm8k_accuracy": 0.846095526914329,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6013290488634464
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260605/Qwen2.5-7B-Instruct__full_sft/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260605/Qwen2.5-7B-Instruct__full_sft/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.796,
+      "new_gsm8k_accuracy": 0.7748294162244125,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5612220075547328
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260605/Qwen2.5-7B-Instruct__full_sft_14043/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260605/Qwen2.5-7B-Instruct__full_sft_14043/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.772,
+      "new_gsm8k_accuracy": 0.7824109173616376,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5648645223049068
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260605/Qwen2.5-7B-Instruct__no_math_number_theory/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260605/Qwen2.5-7B-Instruct__no_math_number_theory/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.744,
+      "new_gsm8k_accuracy": 0.7778620166793025,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5542647473799198
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260605/Qwen2.5-7B-Instruct__no_data_structure/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260605/Qwen2.5-7B-Instruct__no_data_structure/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.784,
+      "new_gsm8k_accuracy": 0.7687642153146323,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5576654229498831
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260605/Qwen2.5-7B-Instruct__no_dynamic_programming/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260605/Qwen2.5-7B-Instruct__no_dynamic_programming/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.8,
+      "new_gsm8k_accuracy": 0.7657316148597423,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.558009726071128
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260605/Qwen2.5-7B-Instruct__no_greedy_search/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260605/Qwen2.5-7B-Instruct__no_greedy_search/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.74,
+      "new_gsm8k_accuracy": 0.7134192570128886,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5494415129781082
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260605/Qwen2.5-7B-Instruct__no_implementation_simulation/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260605/Qwen2.5-7B-Instruct__no_implementation_simulation/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.772,
+      "new_gsm8k_accuracy": 0.7581501137225171,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5604256701712068
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260605/Qwen2.5-7B-Instruct__no_graph/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260605/Qwen2.5-7B-Instruct__no_graph/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.776,
+      "new_gsm8k_accuracy": 0.775587566338135,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5549962198584528
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260605/Qwen2.5-7B-Instruct__no_other_algorithm/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260605/Qwen2.5-7B-Instruct__no_other_algorithm/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.784,
+      "new_gsm8k_accuracy": 0.7725549658832449,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.554242104515727
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260605/Qwen3-8B-Base__full_sft/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260605/Qwen3-8B-Base__full_sft/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.904,
+      "new_gsm8k_accuracy": 0.8423047763457164,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6018291839303803
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260605/Qwen3-8B-Base__full_sft_14043/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260605/Qwen3-8B-Base__full_sft_14043/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.884,
+      "new_gsm8k_accuracy": 0.8514025777103866,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5945510093240667
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260605/Qwen3-8B-Base__no_math_number_theory/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260605/Qwen3-8B-Base__no_math_number_theory/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.868,
+      "new_gsm8k_accuracy": 0.8392721758908264,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5967697579758976
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260605/Qwen3-8B-Base__no_data_structure/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260605/Qwen3-8B-Base__no_data_structure/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.864,
+      "new_gsm8k_accuracy": 0.8430629264594389,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6005199707588925
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260605/Qwen3-8B-Base__no_dynamic_programming/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260605/Qwen3-8B-Base__no_dynamic_programming/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.884,
+      "new_gsm8k_accuracy": 0.844579226686884,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6015069671971873
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260605/Qwen3-8B-Base__no_greedy_search/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260605/Qwen3-8B-Base__no_greedy_search/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.896,
+      "new_gsm8k_accuracy": 0.8468536770280516,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.596823168666976
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260605/Qwen3-8B-Base__no_implementation_simulation/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260605/Qwen3-8B-Base__no_implementation_simulation/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.868,
+      "new_gsm8k_accuracy": 0.8476118271417741,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6043778007209591
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260605/Qwen3-8B-Base__no_graph/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260605/Qwen3-8B-Base__no_graph/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.864,
+      "new_gsm8k_accuracy": 0.8476118271417741,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5974434890030832
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/sft_lora/train_seed_20260605/Qwen3-8B-Base__no_other_algorithm/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval_3seed_sft_lora/train_seed_20260605/Qwen3-8B-Base__no_other_algorithm/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.852,
+      "new_gsm8k_accuracy": 0.8506444275966641,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5944753489215656
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__full_dapo_12168/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/final/q25_full/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.808,
+      "new_gsm8k_accuracy": 0.7642153146322972,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5544675476443852
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__full_dapo_12168/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/groups/q25_full/math_numeric/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.808,
+      "new_gsm8k_accuracy": 0.7642153146322972,
+      "paper_aggregate_recomputed": false,
+      "new_scoreable_overall_mean": null
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__no_math_number_theory/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/final/q25_no_math/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.816,
+      "new_gsm8k_accuracy": 0.77710386656558,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5529493892524694
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__no_math_number_theory/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/groups/q25_no_math/math_numeric/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.816,
+      "new_gsm8k_accuracy": 0.77710386656558,
+      "paper_aggregate_recomputed": false,
+      "new_scoreable_overall_mean": null
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__no_data_structure/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/final/q25_no_data_structure/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.816,
+      "new_gsm8k_accuracy": 0.7695223654283548,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5517528057909161
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__no_data_structure/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/groups/q25_no_data_structure/math_numeric/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.816,
+      "new_gsm8k_accuracy": 0.7695223654283548,
+      "paper_aggregate_recomputed": false,
+      "new_scoreable_overall_mean": null
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__no_dynamic_programming/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/final/q25_no_dynamic_programming/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.808,
+      "new_gsm8k_accuracy": 0.7748294162244125,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5519347991369914
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__no_dynamic_programming/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/groups/q25_no_dynamic_programming/math_numeric/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.808,
+      "new_gsm8k_accuracy": 0.7748294162244125,
+      "paper_aggregate_recomputed": false,
+      "new_scoreable_overall_mean": null
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__no_greedy_search/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/final/q25_no_greedy_search/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.792,
+      "new_gsm8k_accuracy": 0.7634571645185747,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5532686736539817
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__no_greedy_search/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/groups/q25_no_greedy_search/math_numeric/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.792,
+      "new_gsm8k_accuracy": 0.7634571645185747,
+      "paper_aggregate_recomputed": false,
+      "new_scoreable_overall_mean": null
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__no_implementation_simulation/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/final/q25_no_implementation_simulation/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.796,
+      "new_gsm8k_accuracy": 0.7778620166793025,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5564575373878021
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__no_implementation_simulation/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/groups/q25_no_implementation_simulation/math_numeric/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.796,
+      "new_gsm8k_accuracy": 0.7778620166793025,
+      "paper_aggregate_recomputed": false,
+      "new_scoreable_overall_mean": null
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__no_graph/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/final/q25_no_graph/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.82,
+      "new_gsm8k_accuracy": 0.7604245640636846,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5532856204146429
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__no_graph/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/groups/q25_no_graph/math_numeric/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.82,
+      "new_gsm8k_accuracy": 0.7604245640636846,
+      "paper_aggregate_recomputed": false,
+      "new_scoreable_overall_mean": null
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__no_other_algorithm/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/final/q25_no_other_algorithm/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.792,
+      "new_gsm8k_accuracy": 0.7611827141774071,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5507324128611425
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__no_other_algorithm/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/groups/q25_no_other_algorithm/math_numeric/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.792,
+      "new_gsm8k_accuracy": 0.7611827141774071,
+      "paper_aggregate_recomputed": false,
+      "new_scoreable_overall_mean": null
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__full_dapo_12168/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/final/q3_full/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.912,
+      "new_gsm8k_accuracy": 0.8711144806671721,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6412766164844474
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__full_dapo_12168/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/groups/q3_full/math_numeric/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.912,
+      "new_gsm8k_accuracy": 0.8711144806671721,
+      "paper_aggregate_recomputed": false,
+      "new_scoreable_overall_mean": null
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__no_math_number_theory/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/final/q3_no_math/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.908,
+      "new_gsm8k_accuracy": 0.8688400303260045,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6396480479298986
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__no_math_number_theory/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/groups/q3_no_math/math_numeric/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.908,
+      "new_gsm8k_accuracy": 0.8688400303260045,
+      "paper_aggregate_recomputed": false,
+      "new_scoreable_overall_mean": null
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__no_data_structure/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/final/q3_no_data_structure/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.904,
+      "new_gsm8k_accuracy": 0.8771796815769523,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6347810036797358
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__no_data_structure/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/groups/q3_no_data_structure/math_numeric/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.904,
+      "new_gsm8k_accuracy": 0.8771796815769523,
+      "paper_aggregate_recomputed": false,
+      "new_scoreable_overall_mean": null
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__no_dynamic_programming/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/final/q3_no_dynamic_programming/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.896,
+      "new_gsm8k_accuracy": 0.8703563305534496,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6337486017094601
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__no_dynamic_programming/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/groups/q3_no_dynamic_programming/math_numeric/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.896,
+      "new_gsm8k_accuracy": 0.8703563305534496,
+      "paper_aggregate_recomputed": false,
+      "new_scoreable_overall_mean": null
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__no_greedy_search/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/final/q3_no_greedy_search/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.9,
+      "new_gsm8k_accuracy": 0.8726307808946171,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6411549529179549
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__no_greedy_search/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/groups/q3_no_greedy_search/math_numeric/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.9,
+      "new_gsm8k_accuracy": 0.8726307808946171,
+      "paper_aggregate_recomputed": false,
+      "new_scoreable_overall_mean": null
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__no_implementation_simulation/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/final/q3_no_implementation_simulation/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.9,
+      "new_gsm8k_accuracy": 0.8756633813495072,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.640699368889691
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__no_implementation_simulation/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/groups/q3_no_implementation_simulation/math_numeric/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.9,
+      "new_gsm8k_accuracy": 0.8756633813495072,
+      "paper_aggregate_recomputed": false,
+      "new_scoreable_overall_mean": null
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__no_graph/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/final/q3_no_graph/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.916,
+      "new_gsm8k_accuracy": 0.8605003790750568,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6363427740825288
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__no_graph/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/groups/q3_no_graph/math_numeric/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.916,
+      "new_gsm8k_accuracy": 0.8605003790750568,
+      "paper_aggregate_recomputed": false,
+      "new_scoreable_overall_mean": null
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__no_other_algorithm/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/final/q3_no_other_algorithm/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.888,
+      "new_gsm8k_accuracy": 0.8711144806671721,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6420136549672848
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__no_other_algorithm/metrics.json",
+      "destination": "output/stage3_dapo_ablation16_eval/stage3-dapo-ablation16-bestval-eval-noapps-nohealth-20260630-163124/groups/q3_no_other_algorithm/math_numeric/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.888,
+      "new_gsm8k_accuracy": 0.8711144806671721,
+      "paper_aggregate_recomputed": false,
+      "new_scoreable_overall_mean": null
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__full_dapo/metrics.json",
+      "destination": "output/stage3_dapo_three_model_eval/stage3-dapo-three-model-eval-test-20260611-201711/final/qwen25_7b_final/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.816,
+      "new_gsm8k_accuracy": 0.7642153146322972,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.5528789209997726
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__full_dapo/metrics.json",
+      "destination": "output/stage3_dapo_three_model_eval/stage3-dapo-three-model-eval-test-20260611-201711/groups/qwen25_7b_final/math_numeric/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.816,
+      "new_gsm8k_accuracy": 0.7642153146322972,
+      "paper_aggregate_recomputed": false,
+      "new_scoreable_overall_mean": null
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen2.5-7B-Instruct__full_dapo/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval/seed_20260605/stage3_dapo__qwen25_7b_final/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.816,
+      "new_gsm8k_accuracy": 0.7642153146322972,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.553109834005975
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__full_dapo/metrics.json",
+      "destination": "output/stage3_dapo_three_model_eval/stage3-dapo-three-model-eval-test-20260611-201711/final/qwen3_8b_final/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.916,
+      "new_gsm8k_accuracy": 0.8711144806671721,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6374724036910451
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__full_dapo/metrics.json",
+      "destination": "output/stage3_dapo_three_model_eval/stage3-dapo-three-model-eval-test-20260611-201711/groups/qwen3_8b_final/math_numeric/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.916,
+      "new_gsm8k_accuracy": 0.8711144806671721,
+      "paper_aggregate_recomputed": false,
+      "new_scoreable_overall_mean": null
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/dapo/Qwen3-8B-Base__full_dapo/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval/seed_20260605/stage3_dapo__qwen3_8b_final/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.884,
+      "new_gsm8k_accuracy": 0.8711144806671721,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6372628263442379
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/base/Qwen2.5-7B-Instruct/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval/seed_20260605/Qwen2.5-7B-Instruct__base/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.804,
+      "new_gsm8k_accuracy": 0.7710386656557998,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.558207084050639
+    },
+    {
+      "source": "output/gsm8k_full_main_retest_20260713/base/Qwen3-8B-Base/metrics.json",
+      "destination": "output/stage2_taco_sft_clean_prompt_eval/seed_20260605/Qwen3-8B-Base__base/metrics.json",
+      "old_gsm8k_n": 250,
+      "new_gsm8k_n": 1319,
+      "old_gsm8k_accuracy": 0.904,
+      "new_gsm8k_accuracy": 0.869598180439727,
+      "paper_aggregate_recomputed": true,
+      "new_scoreable_overall_mean": 0.6438043106904838
+    }
+  ]
+}

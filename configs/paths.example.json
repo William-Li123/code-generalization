@@ -1,0 +1,9 @@
+{
+  "data_root": "${CG_DATA_ROOT}",
+  "data_test_root": "${CG_DATA_TEST_ROOT}",
+  "model_root": "${CG_MODEL_ROOT}",
+  "output_root": "${CG_OUTPUT_ROOT}",
+  "verl_recipe_dir": "${CG_VERL_RECIPE_DIR}",
+  "verl_environment": "${CG_VERL_ENV}",
+  "notes": "All paths point outside the Git repository. Environment-variable expansion is performed by the stage driver or shell."
+}

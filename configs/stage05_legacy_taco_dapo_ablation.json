@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "experiment": "stage05_legacy_taco_dapo_ablation",
+  "paper_role": "Appendix D legacy DAPO",
+  "models": ["Qwen2.5-7B-Instruct", "Qwen3-8B-Base"],
+  "paper_reported_seed": 20260610,
+  "archived_seed_contract": {
+    "complete_corpus_reference_seed": 20260609,
+    "matched_attribution_seed": 20260610,
+    "note": "The paper collapses DAPO to seed 20260610, but the recovered complete-corpus references were trained with data seed 20260609."
+  },
+  "data": {
+    "verified_pool_rows": 17249,
+    "validation_rows": 100,
+    "matched_rows": 12168,
+    "categories": 7,
+    "matched_training_arms": 8,
+    "complete_reference_arms": 1
+  },
+  "training": {
+    "method": "LoRA DAPO",
+    "learning_rate": 0.000001,
+    "rollouts_per_prompt": 8,
+    "train_batch_size": 32,
+    "generation_batch_size": 32,
+    "ppo_epochs": 1,
+    "max_prompt_tokens": 4096,
+    "max_response_tokens": {"Qwen2.5-7B-Instruct": 2048, "Qwen3-8B-Base": 3072},
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_target": "all-linear",
+    "expected_jobs": {
+      "complete_references": 2,
+      "matched_attribution": 16,
+      "total": 18
+    },
+    "expected_steps": {
+      "complete_reference": 540,
+      "matched_attribution": 381
+    },
+    "adapter_selection": "best saved nonzero validation step by mean pass_frac; tie-break mean passed then later step",
+    "reward": {
+      "full_pass": 1.0,
+      "partial": "0.8 * passed_tests / total_tests"
+    }
+  },
+  "evaluation_contract": "canonical_11_20260719",
+  "evaluation_seed": 20260610,
+  "metadata_manifest": "metadata/stage05/experiment_manifest.json"
+}

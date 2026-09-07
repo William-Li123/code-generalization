@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "package": "stage01_main_kodcode_lora_ablation_reference_results",
+  "normalization": "UTF-8 without BOM; LF line endings",
+  "score_unit": "percentage_points",
+  "models": 6,
+  "evaluated_conditions": 13,
+  "training_arms": 12,
+  "tasks": 11,
+  "seeds": [20260730, 20260731, 20260801],
+  "files": [
+    {"path": "csv/sft_lora_seed20260730.csv", "bytes": 22582, "rows": 78, "sha256": "3914353a57f8e8b84b13ed9b27cb0df1224826effc61933c0520c17602e1fb93"},
+    {"path": "csv/sft_lora_seed20260731.csv", "bytes": 22604, "rows": 78, "sha256": "7ae76351869bf17d4ade4ee523d0d9f45a23cec14f7e7bf94cbf5e3215311f74"},
+    {"path": "csv/sft_lora_seed20260801.csv", "bytes": 22470, "rows": 78, "sha256": "01f2962498c3ed3eb417e0d171cb79dcab2d3d6dff0e275b1a50bb21980437d4"},
+    {"path": "csv/sft_lora_average.csv", "bytes": 22780, "rows": 78, "sha256": "576ae10c2ff71aa0a385047fa696bfa22604c75aeaa0a213373964346b11ba07"}
+  ],
+  "exclusions": {
+    "DeepSeek-Coder-6.7B-Instruct": "historical generations contained undecoded tokenizer artifacts and were not comparable",
+    "raw_generations": "not redistributed",
+    "benchmark_rows_and_hidden_tests": "not redistributed"
+  }
+}

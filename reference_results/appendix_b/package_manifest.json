@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "package": "appendix_b_released_metrics",
+  "source_components": [
+    "legacy archive components 03664, 03661, 03662"
+  ],
+  "path_sanitization": "Historical absolute machine paths were replaced by ${EXTERNAL_HISTORICAL_ROOT}; scores and evaluation fields were not changed.",
+  "files": [
+    {
+      "path": "source/full_work/results/formal/qwen25/base/metrics.json",
+      "bytes": 3637,
+      "sha256": "f22571354ea66583a46b23a4b8a5127924c1400c572b59d8f500c5dfc10f775a"
+    },
+    {
+      "path": "source/full_work/results/formal/qwen25/dapo_best/metrics.json",
+      "bytes": 3741,
+      "sha256": "ae3f4b88949466576cf1885f036a8bd48c8fe32f88fdc7e242a6b69252a7631a"
+    },
+    {
+      "path": "source/full_work/results/selection/qwen25.json",
+      "bytes": 436,
+      "sha256": "d6dc84784cd89cd7713f07d165c3d7f3967910d55a3fd36da7d697878b740a80"
+    },
+    {
+      "path": "source/rl10k_work/results/formal/gemma2/base/metrics.json",
+      "bytes": 3625,
+      "sha256": "2ecf2b8c9c5caf5ef760a10ded812c2af9617b327fe8ee7f563f6800baf5dd44"
+    },
+    {
+      "path": "source/rl10k_work/results/formal/gemma2/dapo_best/metrics.json",
+      "bytes": 3734,
+      "sha256": "ae5bd045b76eab7b693cefd527e7e0b4e91c2fa06f8c99181e55c110a2905146"
+    },
+    {
+      "path": "source/rl10k_work/results/formal/llama31/base/metrics.json",
+      "bytes": 3640,
+      "sha256": "143271203a0bb0844a4aa3ff186e5b7d6db70debb8f797d8661766b5bc7f5970"
+    },
+    {
+      "path": "source/rl10k_work/results/formal/llama31/dapo_best/metrics.json",
+      "bytes": 3739,
+      "sha256": "3b93a4fc470556863520a66f7a4ea4d9f90d52884aa70e0ca68d3948f73d9f91"
+    },
+    {
+      "path": "source/rl10k_work/results/formal/qwen25/base/metrics.json",
+      "bytes": 3637,
+      "sha256": "37fedd51db7e43663700bef401d29318408de2fb0f932eeaa35a623f9b303eac"
+    },
+    {
+      "path": "source/rl10k_work/results/formal/qwen25/dapo_best/metrics.json",
+      "bytes": 3731,
+      "sha256": "06779255b063154543a17da268f6d67ccf2976248fed6886d138f221355be6f3"
+    },
+    {
+      "path": "source/rl10k_work/results/formal/qwen3/base/metrics.json",
+      "bytes": 3635,
+      "sha256": "bf747c2d0e81e5e67f05a3e353b2adb18651ec33aa92d9a0115bbaa619618690"
+    },
+    {
+      "path": "source/rl10k_work/results/formal/qwen3/dapo_best/metrics.json",
+      "bytes": 3726,
+      "sha256": "5236e6dcb122645ea231de03ad8983f2b57811f455896df19a80f4de3f29a02b"
+    },
+    {
+      "path": "source/rl10k_work/results/selection/gemma2.json",
+      "bytes": 409,
+      "sha256": "47b617e1dbabfa09e402eeaf49346ebe010567096d925e50928e9611f0341b8b"
+    },
+    {
+      "path": "source/rl10k_work/results/selection/llama31.json",
+      "bytes": 414,
+      "sha256": "1fcf08c8c5a722b4620bc29b3b5753ccac8c2fd74913d66601efb35e16ef8e21"
+    },
+    {
+      "path": "source/rl10k_work/results/selection/qwen25.json",
+      "bytes": 407,
+      "sha256": "8103c870f2547ccda8d1ccac2744408762e127d9b8ae9256a05458167dad5492"
+    },
+    {
+      "path": "source/rl10k_work/results/selection/qwen3.json",
+      "bytes": 408,
+      "sha256": "56cdc565e265cde4a410d3131eb27df87daebbf5e692625459095a11ab7a59f7"
+    },
+    {
+      "path": "source/stage02_work/results/formal/gemma2/native/base/metrics.json",
+      "bytes": 3656,
+      "sha256": "f48ef8cd5acaf1236b9dabf926ed672389a25e7376398ed8a5da54d6a4ef662b"
+    },
+    {
+      "path": "source/stage02_work/results/formal/gemma2/native/final/metrics.json",
+      "bytes": 4000,
+      "sha256": "55fc5a54147f13e8a1fc1f751815b1ab37b84e54bdd13dfcaf6a1627f6085486"
+    },
+    {
+      "path": "source/stage02_work/results/formal/gemma2/native/half_epoch/metrics.json",
+      "bytes": 3769,
+      "sha256": "4b48d66d9a353e61265bb8664f2728e1f384898ade9d2208c8d4f8d725ee400e"
+    },
+    {
+      "path": "source/stage02_work/results/formal/llama31/native/base/metrics.json",
+      "bytes": 3658,
+      "sha256": "a8b54abaad25579eefbfb52c40937cc3ebbc323ac971329805b49763c08f7df6"
+    },
+    {
+      "path": "source/stage02_work/results/formal/llama31/native/final/metrics.json",
+      "bytes": 3745,
+      "sha256": "3e210193e0b5c1982d207118c815c1f430c60753bd774d1218fbb4148003c6c5"
+    },
+    {
+      "path": "source/stage02_work/results/formal/llama31/native/half_epoch/metrics.json",
+      "bytes": 3755,
+      "sha256": "4603b9dbe7bd0715126f526f253c64ce21a8828d841941d5879b5570e81e8a81"
+    },
+    {
+      "path": "source/stage02_work/results/formal/qwen25/native/base/metrics.json",
+      "bytes": 3649,
+      "sha256": "38de7e7a730ac5a828dc3df5cc0217fa37cefabd93af1df6e974828508e8bb4b"
+    },
+    {
+      "path": "source/stage02_work/results/formal/qwen25/native/final/metrics.json",
+      "bytes": 3722,
+      "sha256": "1dade1ce4fa8accd9ce01e248b5d6ee82ce0b477931774820c45bce700da518a"
+    },
+    {
+      "path": "source/stage02_work/results/formal/qwen25/native/half_epoch/metrics.json",
+      "bytes": 3763,
+      "sha256": "fb1d3fb049df5fa438c8fca42ac465ef82f43d83c7f4d9615ecb6b1c05196f5d"
+    },
+    {
+      "path": "source/stage02_work/results/formal/qwen3/plain/base/metrics.json",
+      "bytes": 3648,
+      "sha256": "872c15c0acce0fac4bafede04fc380a36608046df064071681c66d31cadcd6b6"
+    },
+    {
+      "path": "source/stage02_work/results/formal/qwen3/plain/final/metrics.json",
+      "bytes": 3733,
+      "sha256": "0b07c7cd7f05f89cca6d230ecc48acec2eab1d22115dc46b270095c47672a09d"
+    },
+    {
+      "path": "source/stage02_work/results/formal/qwen3/plain/half_epoch/metrics.json",
+      "bytes": 3761,
+      "sha256": "d4eb2c71cf7c3ea010294158d9a3a2ecf14689ca876b4d140ff6d9547210dfa5"
+    }
+  ]
+}

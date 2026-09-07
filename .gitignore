@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+.pixi/
+
+# Local configuration and secrets
+.env
+paths.local.json
+*.key
+*.pem
+
+# Data, models, checkpoints, and generated artifacts are external by design
+data/
+data_train/
+data_test/
+model/
+models/
+checkpoint/
+checkpoints/
+output/
+outputs/
+logs/
+cache/
+runtime_cache/
+third_party/
+*.parquet
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.tar
+*.tar.gz
+*.tar.zst
+*.zip
+
+# Generated analysis products
+artifacts/
+figures/
+*.csv
+*.tsv
+*.jsonl
+!reference_results/**/*.csv
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

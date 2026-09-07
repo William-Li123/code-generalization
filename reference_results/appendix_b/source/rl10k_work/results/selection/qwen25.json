@@ -1,0 +1,11 @@
+{
+  "model_key": "qwen25",
+  "reason": "best_validation_full_pass_rate",
+  "step": 50,
+  "adapter": "${EXTERNAL_HISTORICAL_ROOT}/diagnose_dapo/checkpoints/qwen25/full_dapo/adapters/step_000050",
+  "pass_frac": 0.8732460317460319,
+  "passed": 0.8,
+  "score": 0.8,
+  "n": 100,
+  "validation_file": "${EXTERNAL_HISTORICAL_ROOT}/diagnose_dapo/output/qwen25-full-dapo-2gpu-20260724-194650/validation/50.jsonl"
+}

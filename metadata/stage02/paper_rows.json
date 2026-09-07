@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "contract": "appendix_b_stage02_paper_rows",
+  "source_component": "AOSS component 03664",
+  "source_answer_rows": 37881,
+  "source_parquet_sha256": "6e91ea43bb43ff9d20514c065428152078b36ba57c6f6c577f794395f6decae1",
+  "checkpoints": {
+    "half_epoch": {"epoch": 0.5, "archived_step": 1184},
+    "final": {"epoch": 1.0, "archived_step": 2368}
+  },
+  "rows": {
+    "qwen25": {"model": "Qwen2.5-7B-Instruct", "training_prompt_mode": "native", "evaluation_prompt_mode": "chat", "enable_thinking": false},
+    "qwen3": {"model": "Qwen3-8B-Base", "training_prompt_mode": "plain", "evaluation_prompt_mode": "plain", "enable_thinking": false},
+    "llama31": {"model": "Llama-3.1-8B-Instruct", "training_prompt_mode": "native", "evaluation_prompt_mode": "chat", "enable_thinking": false},
+    "gemma2": {"model": "Gemma-2-9B-Instruct", "training_prompt_mode": "native", "evaluation_prompt_mode": "chat", "enable_thinking": false}
+  }
+}
