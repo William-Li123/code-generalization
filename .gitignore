@@ -43,7 +43,15 @@ figures/
 *.csv
 *.tsv
 *.jsonl
-!reference_results/**/*.csv
+analysis/
+reference_results/
+reports/
+runs/
+progress/
+plan/
+*.png
+*.pdf
+*.svg
 
 # Editors and OS
 .idea/

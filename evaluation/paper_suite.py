@@ -203,6 +203,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--health-temperature", type=float, default=0.0)
     parser.add_argument("--health-top-p", type=float, default=1.0)
     parser.add_argument("--max-new-tokens-code", type=int, default=2048)
+    parser.add_argument("--max-new-tokens-gsm8k", type=int, default=256)
     parser.add_argument("--max-new-tokens-apps", type=int, default=2048)
     parser.add_argument("--max-new-tokens-health", type=int, default=2048)
     parser.add_argument("--apps-exec-timeout", type=float, default=12.0)
@@ -1052,7 +1053,7 @@ def evaluate_gsm8k(model, tokenizer, args) -> dict[str, Any]:
         )
         for row in rows
     ]
-    replies = generate_batch(model, tokenizer, prompts, 256, args.generation_batch_size, args.temperature, args.top_p)
+    replies = generate_batch(model, tokenizer, prompts, args.max_new_tokens_gsm8k, args.generation_batch_size, args.temperature, args.top_p)
     correct = 0
     records = []
     for reply, row in zip(replies, rows):
@@ -1618,7 +1619,7 @@ def main() -> None:
             "generation_batch_size": args.generation_batch_size,
             "max_new_tokens_code": args.max_new_tokens_code,
             "task_max_new_tokens": {
-                "gsm8k": 256,
+                "gsm8k": args.max_new_tokens_gsm8k,
                 "math500_medium": 512,
                 "math500_high_level": 512,
                 "finqa_medcalc": 128,

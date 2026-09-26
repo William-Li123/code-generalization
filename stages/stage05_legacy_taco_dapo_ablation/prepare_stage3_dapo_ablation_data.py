@@ -79,7 +79,7 @@ def parse_args() -> argparse.Namespace:
         default=DATA_ROOT / "stage3_dapo_ablation_12168" if DATA_ROOT else None,
         required=DATA_ROOT is None,
     )
-    parser.add_argument("--seed", type=int, default=20260610)
+    parser.add_argument("--seed", type=int, required=True)
     parser.add_argument("--target-count", type=int, default=12168)
     parser.add_argument("--overwrite", action="store_true")
     return parser.parse_args()

@@ -49,7 +49,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--train-file", required=True)
     parser.add_argument("--checkpoint-dir", required=True)
     parser.add_argument("--log-dir", required=True)
-    parser.add_argument("--seed", type=int, default=20260603)
+    parser.add_argument("--seed", type=int, required=True)
     parser.add_argument("--max-seq-len", type=int, default=4096)
     parser.add_argument("--per-device-train-batch-size", type=int, default=1)
     parser.add_argument("--gradient-accumulation-steps", type=int, default=2)

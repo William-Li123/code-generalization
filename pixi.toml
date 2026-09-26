@@ -1,7 +1,7 @@
 [workspace]
 name = "code-to-reasoning-transfer"
 version = "0.1.0"
-description = "Code-only reproduction repository for code-to-reasoning transfer experiments"
+description = "Training and evaluation code for code-to-reasoning transfer"
 channels = ["conda-forge"]
 platforms = ["linux-64"]
 
@@ -20,7 +20,6 @@ pandas = "*"
 numpy = "<2"
 scipy = "*"
 scikit-learn = "*"
-matplotlib = "*"
 pillow = "*"
 pytest = "*"
 ruff = "*"
@@ -45,5 +44,5 @@ dapo = { features = ["dapo"], solve-group = "main" }
 
 [tasks]
 validate-repo = "python tests/validate_repository.py"
-test = "pytest -q"
-compile = "python -m compileall -q analysis evaluation stages tests"
+test = "python -m unittest discover -s tests -v"
+compile = "python -m compileall -q experiments evaluation stages dapo tests"

@@ -34,7 +34,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--mmlu-file", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--prompt-mode", choices=["plain", "native"], required=True)
-    parser.add_argument("--seed", type=int, default=20260724)
+    parser.add_argument("--seed", type=int, required=True)
     parser.add_argument("--batch-size", type=int, default=8)
     parser.add_argument("--max-new-tokens", type=int, default=2048)
     parser.add_argument("--temperature", type=float, default=0.2)

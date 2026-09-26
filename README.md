@@ -1,116 +1,138 @@
 # Code-to-Reasoning Transfer Experiments
 
-Clean, code-only release for the experiments reported in **Why Does Code
-Improve Reasoning? On Code-to-Reasoning Transfer in LLM Post-Training Through
-a Decompositional Lens**.
+Code for **Why Does Code Improve Reasoning? On Code-to-Reasoning Transfer in
+LLM Post-Training Through a Decompositional Lens**.
 
-This repository was reconstructed from the active project snapshot and the
-read-only AOSS archive. It intentionally excludes datasets, model weights,
-checkpoints, raw generations, logs, and large result files. Small aggregate
-aggregate reference packages are included so the main analysis and Appendices
-A, B and D can be regenerated without rerunning hundreds of GPU jobs.
+This checkout contains implementation code, configuration templates and unit
+tests only. Datasets, weights, run records, results, figures and retrospective
+analyses are not distributed here.
 
 ## Experimental stages
 
-| Stage | Paper role | Method | Data family |
-|---|---|---|---|
-| 01 | Main text | 10-category matched LoRA-SFT ablation | cleaned KodCode, 35,974 train rows |
-| 02 | Appendix B | 0.5/1.0-epoch LoRA-SFT diagnosis | 37,881 answer rows, 36,446 unique questions |
-| 03 | Appendix B | DAPO diagnosis | 9,501+100 RL subset; Qwen2.5 also 35,974+100 |
-| 04 | Appendix D | 7-category matched LoRA-SFT ablation | TACO + LeetCode-style |
-| 05 | Appendix D | 7-category matched DAPO ablation | execution-verified TACO + LeetCode-style |
-| 06 | Appendix A | full-parameter SFT robustness probe | same data as Stage 04 |
-
-`plan/` and `progress/` contain exactly one document for each stage. Plans
-describe the frozen design; progress files describe what was actually run and
-the provenance of the reported results.
-
-## Important provenance correction
-
-Appendix B is not one experiment on an identical 36,074-example split. The
-archived artifacts establish three distinct inputs:
-
-- Stage 02 SFT: 37,881 answer rows (36,446 unique questions).
-- Stage 03 DAPO-9.6k: 9,501 train + 100 validation problems.
-- Stage 03 Qwen2.5 full-corpus DAPO: 35,974 train + 100 validation problems.
-
-The configurations and progress records in this repository preserve those
-actual contracts instead of repeating the inaccurate unified-data wording.
+| Stage | Method | Data family |
+|---|---|---|
+| 01 | Category-controlled LoRA SFT | Labeled code problems |
+| 02 | LoRA SFT and validation-based checkpoint selection | Code question–answer pairs |
+| 03 | DAPO reward and dataset adapters | Code problems with executable tests |
+| 04 | LoRA SFT and category data preparation | TACO and LeetCode-style problems |
+| 05 | Execution verification and DAPO | TACO and LeetCode-style problems |
+| 06 | Full-parameter SFT | Code question–answer pairs |
 
 ## Layout
 
 ```text
-analysis/      result consolidation and paper statistics
-configs/       path-free, machine-readable experiment contracts
-dapo/          shared VERL/DAPO runner and archived runtime compatibility patches
-docs/          data, evaluation, provenance, and reproducibility notes
-evaluation/    current and legacy evaluation harnesses (kept separate)
-metadata/      frozen counts, schemas, and cryptographic artifact identities
-plan/          six frozen experimental plans
-progress/      six evidence-backed completion records
-reference_results/ hash-frozen aggregate packages (no prompts/generations)
-stages/        data preparation and training code for stages 01--06
-tests/         repository and lightweight unit checks
+configs/                 editable, path-only and hyperparameter examples
+dapo/                    VERL runner and version-checked compatibility patches
+evaluation/              separate current and legacy evaluation harnesses
+experiments/category_sft/ portable category sampling and multi-model job runner
+stages/                  reusable preparation, training and reward implementations
+tests/                   CPU-only unit and repository checks
 ```
 
 ## Setup
 
-1. Install [Pixi](https://pixi.sh/) on a Linux host with CUDA 12.x.
-2. Run `pixi install` for SFT/evaluation. DAPO additionally requires the
-   archived-compatible VERL recipe described in `docs/REPRODUCIBILITY.md`.
-3. Copy `.env.example` to `.env`, or export the six required `CG_*` variables.
-4. Put datasets and models outside this repository.
-5. Validate the checkout:
+Use Linux with CUDA for training. Install [Pixi](https://pixi.sh/), then run
+`pixi install` for the SFT/evaluation environment. The dependency specification
+is a setup starting point, not a claim of an exact historical runtime. No
+environment or model checkpoint is bundled.
+
+Copy `.env.example` to a local `.env` and export the relevant variables, or
+provide paths through command-line arguments. Keep all data and outputs outside
+the checkout. Models must already be available locally.
 
 ```bash
-pixi run validate-repo
 pixi run test
+pixi run validate-repo
+pixi run compile
 ```
 
-Recreate the main-paper tables, heatmaps, headline figure, and null analyses
-from the included aggregate scores:
+## Category-controlled LoRA SFT
+
+The portable runner supports whole-category training, minimum-size matched
+single categories, balanced or proportional mixtures, random controls and
+leave-category-out arms. Selected mixtures accept any caller-supplied category
+list, including two or three categories. No model-specific best-category
+ranking is embedded.
+
+1. Provide a JSONL or Parquet training file with `problem_id`,
+   `primary_category`, `prompt` and `response`.
+2. Copy `configs/category_recipe.example.json` outside the checkout and replace
+   the placeholder categories with labels from your data.
+3. Prepare the arms in a new external directory:
 
 ```bash
-pixi run python analysis/reproduce_paper.py \
-  --package-root reference_results/stage01 \
-  --output /external/reproduced-paper-artifacts \
-  --draws 2000 \
-  --label-shuffle-draws 20000
+python -m experiments.category_sft.build_data \
+  --source "$TRAIN_FILE" --validation "$VALIDATION_FILE" \
+  --recipe "$RECIPE_FILE" --output-dir "$PREPARED_DIR" \
+  --seed "${SAMPLING_RANDOM_STATE:?set explicitly}"
 ```
 
-The same checkout also rebuilds Appendix A, Appendix B, and legacy Appendix D
-from `reference_results/stage06`, `reference_results/appendix_b`, and
-`reference_results/legacy`; exact commands are in
-`reference_results/README.md`.
+`per_category: "minimum"` uses the smallest category in the source pool;
+`"all"` retains the selected category in full. A numeric `per_category`
+uses that many examples from each selected category. Alternatively, `total`
+specifies a total mixture budget. For matched single and mixture arms, shared
+category rankings reuse the same examples. The builder rejects duplicate IDs,
+train/validation overlap, insufficient capacity and existing output directories.
+Omitting `--validation` also omits the overlap check.
 
-For the full data-to-results chain, start with
-`stages/stage01_main_kodcode_lora_ablation/README.md`. Its portable driver
-validates the frozen data and evaluation manifests, constructs the exact 216
-training / 234 evaluation job graph, and packages the results. Outputs and all
-non-code assets are required to live outside the Git checkout.
+Copy `configs/category_run.example.json` to an external location and set your
+model directories, learning rates, prepared arm names and evaluation-data root.
+Its numerical values are configurable defaults, not a record of a completed run.
+All model entries require an explicit training prompt mode. Check the plan first:
 
-Each stage README/plan gives explicit preparation, training, and evaluation
-commands. Cluster submission wrappers are deliberately not tied to an ACP
-account, tenant, job ID, or private mount.
+```bash
+python -m experiments.category_sft.run \
+  --config "$RUN_CONFIG" --manifest "$PREPARED_DIR/manifest.json" \
+  --output-dir "$RUN_OUTPUT" \
+  --seeds "${TRAIN_RANDOM_STATE:?set explicitly}" \
+  --eval-seed "${EVAL_RANDOM_STATE:?set explicitly}" \
+  --template-date "${TEMPLATE_DATE:?use DD Mon YYYY}" --include-base
+```
+
+Add `--execute` only after checking the plan and environment. Each configured
+GPU runs one independent job at a time; a free lane takes the next model/arm.
+The example exposes four lanes without using four-rank DDP for a single arm.
+This command runs inside an already allocated machine or cluster job; it does
+not create an ACP allocation.
+
+Native templates receive the same caller-supplied date during training and
+evaluation. The Transformers resume-tail compatibility patch applies only to its
+explicitly supported version and only within the running Python process.
+Completed outputs are checked before reuse. Incomplete training checkpoints
+are rejected, and partial evaluation is not silently resumed or overwritten.
+Runtime manifests are written only to the external output directory.
 
 ## Evaluation warning
 
-`evaluation/paper_suite.py` is the current 11-task harness used by the main
-experiment. `evaluation/legacy_suite.py` reconstructs the older TACO/LeetCode
-experiments. Stage 06 deliberately aggregates ten tasks (the shared suite
-minus GSM8K); its recovered GSM8K n=250 and APPS outputs are diagnostics only.
-Absolute scores across harness generations are not interchangeable.
-Generated Python is executed by the code benchmarks; run evaluation inside an
-appropriately isolated container.
+`evaluation/paper_suite.py` and `evaluation/legacy_suite.py` remain separate.
+Prompt construction, answer extraction and scoring are retained in their
+respective cores. Do not mix their scores as if they were one protocol.
+The current suite's GSM8K generation budget can be supplied independently using
+`--max-new-tokens-gsm8k`; its default remains unchanged.
+
+Use `evaluation/prepare_standard11.py --help` for the required benchmark
+layout and external source inputs. Some normalized source files must be
+provided by the caller; this repository does not distribute them.
+
+The portable category runner requires bubblewrap, libseccomp, a Linux x86-64
+system Python 3.10, and a matching NumPy package directory for isolated code
+execution. Set `CG_BWRAP` and `CG_SANDBOX_PACKAGES` if their locations differ
+from the defaults. Run `python -m experiments.category_sft.sandbox_runner`
+to verify isolation before GPU work. It fails closed when unavailable.
+Direct legacy evaluation, verification and reward scripts execute supplied code:
+run those only inside a separately isolated, disposable environment.
+
+## DAPO and other stages
+
+Stage scripts expose their own command-line arguments through `--help`.
+DAPO additionally needs a separately provisioned VERL recipe and compatible
+runtime. `dapo/apply_runtime_patches.py --help` describes the version-checked
+patch interface. Configure the external paths in `.env.example` and supply
+runtime randomness explicitly before using `dapo/run_training.sh`.
+Patch application is opt-in; upstream license notices are retained.
 
 ## Release status
 
-The code and experiment contracts are organized for public version control.
-Before a public release, the authors still need to choose a source-code
-license, publish access instructions for the non-redistributed datasets and
-models, and fill the exact historical model Hub revisions that could not be
-recovered from local snapshots. See `docs/REPRODUCIBILITY.md` for the complete
-known-gap ledger.
-
-For a table/figure-level index, see `docs/PAPER_TRACEABILITY.md`; for the final
-paper-to-`/data`-to-AOSS file audit, see `docs/SOURCE_AUDIT.md`.
+No results or analysis claims are supplied with this code-only checkout.
+Dataset and model access remain subject to their upstream terms. A repository-wide
+source-code license has not yet been selected.

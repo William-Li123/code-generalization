@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import importlib.util
+import unittest
 from pathlib import Path
 
 
@@ -25,3 +26,11 @@ def test_runtime_targets_are_unique_and_scoped_to_verl() -> None:
     targets = [target for target, _ in PATCHER.PATCHES.values()]
     assert len(targets) == len(set(targets))
     assert all(target.startswith("verl/") and target.endswith(".py") for target in targets)
+
+
+class PatchContractTests(unittest.TestCase):
+    def test_patch_hashes(self):
+        test_frozen_runtime_patch_hashes()
+
+    def test_scoped_targets(self):
+        test_runtime_targets_are_unique_and_scoped_to_verl()

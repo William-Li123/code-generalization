@@ -50,7 +50,7 @@ def parse_args() -> argparse.Namespace:
         default=DATA_ROOT / "stage3_dapo_full_verified" if DATA_ROOT else None,
         required=DATA_ROOT is None,
     )
-    parser.add_argument("--seed", type=int, default=20260609)
+    parser.add_argument("--seed", type=int, required=True)
     parser.add_argument("--val-count", type=int, default=100)
     parser.add_argument("--max-prompt-length", type=int, default=4096)
     parser.add_argument("--verify-workers", type=int, default=48)

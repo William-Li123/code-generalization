@@ -1,0 +1,34 @@
+{
+  "models": {
+    "model_a": {
+      "path": "/external/models/your-model",
+      "prompt_mode": "native",
+      "learning_rate": 0.00002
+    }
+  },
+  "arms": ["single_a", "pair_ab", "triple_abc", "balanced", "full"],
+  "data_root": "/external/benchmarks/standard11",
+  "gpus": ["0", "1", "2", "3"],
+  "training": {
+    "target_profile": "attention",
+    "max_seq_len": 4096,
+    "per_device_batch_size": 1,
+    "gradient_accumulation_steps": 16,
+    "epochs": 1.0,
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.01,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "gradient_checkpointing": true
+  },
+  "evaluation": {
+    "tasks": ["arc_challenge", "finqa", "legalbench", "medcalc", "scienceqa", "gsm8k", "math500_medium", "math500_high_level", "humaneval", "mbpp_simple", "mbpp_plus"],
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "generation_batch_size": 4,
+    "choice_batch_size": 24,
+    "max_new_tokens_code": 2048,
+    "max_new_tokens_gsm8k": 256
+  }
+}

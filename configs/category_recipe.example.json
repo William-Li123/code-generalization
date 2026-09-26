@@ -1,0 +1,8 @@
+[
+  {"name": "single_a", "mode": "single", "categories": ["category_a"], "per_category": "minimum"},
+  {"name": "pair_ab", "mode": "mixture", "categories": ["category_a", "category_b"], "per_category": "minimum"},
+  {"name": "triple_abc", "mode": "mixture", "categories": ["category_a", "category_b", "category_c"], "per_category": "minimum"},
+  {"name": "balanced", "mode": "mixture", "per_category": "minimum"},
+  {"name": "without_a", "mode": "leave_out", "categories": ["category_a"]},
+  {"name": "full", "mode": "full"}
+]

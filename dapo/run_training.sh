@@ -24,7 +24,6 @@ fi
 MODEL_PATH=${MODEL_PATH:-"$CG_MODEL_ROOT/Qwen3-8B-Base"}
 DATA_DIR=${DATA_DIR:-"$CG_DATA_ROOT/stage3_dapo_full_verified"}
 REWARD_PATH=${REWARD_PATH:-"$STAGE_DIR/stage3_code_reward.py"}
-ANALYZE_PATH=${ANALYZE_PATH:-"$STAGE_DIR/analyze_run.py"}
 VERL_ENTRYPOINT=${VERL_ENTRYPOINT:-dapo.main_dapo}
 VERL_CONFIG_CWD=${VERL_CONFIG_CWD:-"$VERL_RECIPE_DIR"}
 
@@ -68,7 +67,7 @@ FILTER_GROUPS_ENABLE=${FILTER_GROUPS_ENABLE:-True}
 FILTER_GROUPS_METRIC=${FILTER_GROUPS_METRIC:-seq_reward}
 FILTER_GROUPS_MAX_GEN_BATCHES=${FILTER_GROUPS_MAX_GEN_BATCHES:-0}
 DATA_SHUFFLE=${DATA_SHUFFLE:-True}
-DATA_SEED=${DATA_SEED:-20260609}
+: "${DATA_SEED:?Set DATA_SEED explicitly for this run}"
 VAL_BEFORE_TRAIN=${VAL_BEFORE_TRAIN:-True}
 TEST_FREQ=${TEST_FREQ:-10}
 SAVE_FREQ=${SAVE_FREQ:-50}
@@ -349,12 +348,6 @@ if [[ "$TRAIN_STATUS" -ne 0 && -d "$RAY_TMP_BASE/session_latest/logs" ]]; then
   mkdir -p "$RUN_DIR/ray_logs"
   cp -a "$RAY_TMP_BASE/session_latest/logs/." "$RUN_DIR/ray_logs/" 2>/dev/null || true
 fi
-
-"$PYTHON" "$ANALYZE_PATH" \
-  --run-dir "$RUN_DIR" \
-  --model-path "$MODEL_PATH" \
-  --max-response-length "$MAX_RESPONSE_LENGTH" \
-  2>&1 | tee "$RUN_DIR/analyze.log"
 
 if command -v "$RAY" >/dev/null 2>&1; then
   "$RAY" stop --force >/dev/null 2>&1 || true

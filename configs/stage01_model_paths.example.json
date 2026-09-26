@@ -1,8 +1,0 @@
-{
-  "gemma2_9bin": "/external/models/Gemma-2-9B-Instruct",
-  "llama31_8bin": "/external/models/Llama-3.1-8B-Instruct",
-  "llama32_3bin": "/external/models/Llama-3.2-3B-Instruct",
-  "qwen15_7bchat": "/external/models/Qwen1.5-7B-Chat",
-  "qwen25_7bin": "/external/models/Qwen2.5-7B-Instruct",
-  "qwen3_4bin": "/external/models/Qwen3-4B-Instruct-2507"
-}

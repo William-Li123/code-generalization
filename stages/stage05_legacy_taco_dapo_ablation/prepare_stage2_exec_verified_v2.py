@@ -48,7 +48,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--dapo-dir", type=Path, default=DEFAULT_DAPO_DIR, required=DEFAULT_DAPO_DIR is None)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT, required=DEFAULT_OUTPUT is None)
     parser.add_argument("--validation-count", type=int, default=500)
-    parser.add_argument("--seed", type=int, default=20260721)
+    parser.add_argument("--seed", type=int, required=True)
     parser.add_argument("--repair-workers", type=int, default=24)
     parser.add_argument("--exec-timeout", type=float, default=180.0)
     parser.add_argument("--per-test-timeout", type=float, default=1.0)

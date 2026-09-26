@@ -21,7 +21,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--source", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
-    parser.add_argument("--seed", type=int, default=20260730)
+    parser.add_argument("--seed", type=int, required=True)
     parser.add_argument("--overwrite", action="store_true")
     return parser.parse_args()
 

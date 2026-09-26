@@ -21,7 +21,6 @@ DATA_ROOT = Path(os.environ["CG_DATA_ROOT"]).expanduser() if os.environ.get("CG_
 if hasattr(sys, "set_int_max_str_digits"):
     sys.set_int_max_str_digits(0)
 
-SEED = 20260603
 TARGET_COUNT = 14043
 
 CORE_CATEGORIES = [
@@ -62,7 +61,7 @@ def parse_args() -> argparse.Namespace:
         default=DATA_ROOT / "stage2_taco_sft_clean_prompt" if DATA_ROOT else None,
         required=DATA_ROOT is None,
     )
-    parser.add_argument("--seed", type=int, default=SEED)
+    parser.add_argument("--seed", type=int, required=True)
     parser.add_argument("--target-count", type=int, default=TARGET_COUNT)
     parser.add_argument("--overwrite", action="store_true")
     return parser.parse_args()

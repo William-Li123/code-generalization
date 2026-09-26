@@ -22,6 +22,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--source-rl-validation", type=Path, required=True)
     parser.add_argument("--ready-marker", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
+    parser.add_argument("--expected-total", type=int, help="Optional total-row assertion")
     return parser.parse_args()
 
 
@@ -207,8 +208,8 @@ def main() -> None:
         raise ValueError("train and validation original-question IDs overlap")
     if len(train_sft) != len(train_rl) or len(val_sft) != len(val_rl):
         raise ValueError("SFT and RL row counts do not match")
-    if len(train_sft) + len(val_sft) != 36074:
-        raise ValueError("expected exactly 36,074 selected examples")
+    if args.expected_total is not None and len(train_sft) + len(val_sft) != args.expected_total:
+        raise ValueError(f"expected exactly {args.expected_total} selected examples")
 
     output_files = [
         args.output_dir / "train/sft.parquet",
@@ -217,7 +218,7 @@ def main() -> None:
         args.output_dir / "validation/rl.parquet",
     ]
     manifest = {
-        "name": "kodcode_clean_36074",
+        "name": "code_sft_rl_export",
         "version": "1.0",
         "template_policy": (
             "Template-neutral structured messages. Apply each model's tokenizer "
@@ -243,7 +244,8 @@ def main() -> None:
             "difficulty": distribution(val_sft, "difficulty"),
         },
         "verification": {
-            "all_reference_answers_passed_all_hidden_tests": True,
+            "reference_execution_checked_by_this_exporter": False,
+            "source_ready_marker_sha256": sha256(args.ready_marker),
             "strict_binary_reward": "1 iff all tests pass; otherwise 0",
             "train_validation_problem_id_overlap": 0,
             "train_validation_original_question_overlap": 0,

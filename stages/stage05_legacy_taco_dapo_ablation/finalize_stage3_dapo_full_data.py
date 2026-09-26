@@ -42,7 +42,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--max-prompt-length", type=int, default=4096)
     parser.add_argument("--val-count", type=int, default=100)
-    parser.add_argument("--seed", type=int, default=20260609)
+    parser.add_argument("--seed", type=int, required=True)
     return parser.parse_args()
 
 
