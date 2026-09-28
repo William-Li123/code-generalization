@@ -1,7 +1,6 @@
-# Why Does Code Improve Reasoning? On Code-to-Reasoning Transfer in LLM Post-Training Through a Decompositional Lens
+# How Code Helps Different Tasks? A Decompositional Lens on LLM Post-Training
 
-Code for **Why Does Code Improve Reasoning? On Code-to-Reasoning Transfer in
-LLM Post-Training Through a Decompositional Lens**.
+Code for **How Code Helps Different Tasks? A Decompositional Lens on LLM Post-Training**.
 
 This checkout contains implementation code, configuration templates and unit
 tests only. Datasets, weights, run records, results, figures and retrospective
