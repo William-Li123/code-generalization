@@ -1,4 +1,4 @@
-# Code-to-Reasoning Transfer Experiments
+# Why Does Code Improve Reasoning? On Code-to-Reasoning Transfer in LLM Post-Training Through a Decompositional Lens
 
 Code for **Why Does Code Improve Reasoning? On Code-to-Reasoning Transfer in
 LLM Post-Training Through a Decompositional Lens**.
