@@ -18,7 +18,7 @@ from experiments.category_sft.scheduler import run_dynamic
 from experiments.category_sft.template import bind
 from experiments.category_sft.trainer_compat import OLD, NEW, patched_source
 from experiments.category_sft.validation import result_section, validate_eval, require_complete_checkpoints
-from validate_repository import validate
+from validate_repository import has_private_machine_path, validate
 
 
 def rows():
@@ -226,3 +226,20 @@ class RuntimeTests(unittest.TestCase):
 
     def test_source_only_repository(self):
         self.assertGreater(validate(), 30)
+
+    def test_private_paths_are_detected_without_named_users(self):
+        for root in ('home', 'Users', 'data', 'mnt', 'root'):
+            candidate = '/'.join(('', root, 'example-user', 'project'))
+            with self.subTest(root=root):
+                self.assertTrue(has_private_machine_path(candidate))
+        for separator in ('/', chr(92)):
+            candidate = 'X:' + separator + 'example-project' + separator + 'data'
+            self.assertTrue(has_private_machine_path(candidate))
+            self.assertTrue(has_private_machine_path('~' + separator + 'project'))
+
+    def test_generic_paths_and_upstream_links_are_allowed(self):
+        for candidate in ('/path/to/models', '${CG_DATA_ROOT}/train.jsonl',
+                          'data/train.jsonl', '/usr/bin/python3', '/tmp/sandbox',
+                          'https://example.org/data/project', 'no host data/home/proc'):
+            with self.subTest(candidate=candidate):
+                self.assertFalse(has_private_machine_path(candidate))

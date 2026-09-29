@@ -8,6 +8,16 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def has_private_machine_path(text):
+    """Detect machine-specific paths without embedding any author's identity."""
+    return bool(re.search(
+        r'(?<![\w./\\])/(?:home|Users|data|mnt|root)(?:/[\w.-]+)+'
+        r'|(?<![\w])[A-Za-z]:[/\\]'
+        r'|(?<![\w])~[/\\]',
+        text,
+    ))
+
+
 def validate():
     names = subprocess.check_output(['git', 'ls-files', '--cached', '--others', '--exclude-standard'],
                                     cwd=ROOT, text=True).splitlines()
@@ -25,7 +35,7 @@ def validate():
             json.loads(text)
         if re.search(r'(?<![A-Za-z0-9])202\d{5}(?![A-Za-z0-9])', text):
             raise AssertionError(f'Historical run identifier: {rel}')
-        if re.search(r'/(?:mnt/aoss-[\w-]+|data/yuzheng)/|[A-Z]:[/\\](?:Users|桌面)', text):
+        if has_private_machine_path(text):
             raise AssertionError(f'Private machine path: {rel}')
         if re.search(r'gh[pousr]_[A-Za-z0-9]{25,}|github_pat_[A-Za-z0-9_]{30,}', text):
             raise AssertionError(f'Credential-like content: {rel}')
